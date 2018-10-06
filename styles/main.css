@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+  height: 100%;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial;
+    -webkit-font-smoothing: antialiased;
+    font-weight: bold;
+    max-width:1150px;
+    margin: auto;
+    background: white;
+    padding: 0 25px;
+    color: #4a4a4a;
+    background-image: url("../images/background-gradient.png");
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
+    max-height: 100%;
+}
+
+/***** Header styling *****/
+
+.header-container {
+    flex-flow: row wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px 0;
+    width: 100%;
+}
+
+.logo-container {
+    margin-left: 15px;
+}
+
+    .logo-container .logo {
+        font-family: 'Satisfy', cursive;
+        color: #4484ce;
+        font-size: 50px;
+        display: block;
+    }
+
+/***** Navigation styling *****/
+
+nav {
+    align-self: center;
+    margin: 0 0.4em 0 0.8em;
+}
+
+    nav ul li {
+        display: inline;
+        font-family: 'Helvetica Neue', sans-serif;
+        font-weight:400;
+        font-size: 18px;
+        padding: 0 0 0 1.4em;
+        color: #4a4a4a;
+    }
+
+        nav ul li a {
+            color: #4a4a4a;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            border-bottom: 1px solid #4a4a4a;
+            padding-bottom: 2px;
+        }
+
+        nav ul li a.current {
+            border-bottom: 1px solid #4a4a4a;
+            padding-bottom: 2px;
+        }
+
+        nav ul li a i {
+            border-bottom: none;
+        }
+
+/***** Intro page styling *****/
+
+section.intro {
+    font-size: 50px;
+    color: #4a4a4a;
+    text-align: left;
+    line-height: 1.25;
+}
+
+    section h1 {
+        font-size: 50px;
+        margin-bottom:35px;
+    }
+
+    section.intro a {
+        text-decoration: none;
+        color: #4a4a4a;
+        border-bottom: 6px solid #4484ce;
+    }
+
+        section.intro a.newt:hover {
+            color: #95BCEB;
+        }
+        section.intro a.umsi:hover {
+            color: #f9cf00;
+        }
+
+ul.profiles {
+    margin-top: 75px;
+    list-style-type: none;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+    ul.profiles li {
+        float:left;
+        padding-right: 20px;
+    }
+
+    ul.profiles li a {
+        text-decoration: none;
+        color: #4a4a4a;
+    }
+
+    ul.profiles li a:hover {
+        border-bottom: 1px solid #4a4a4a;
+        padding-bottom: 2px;
+    }
+
+    ul.profiles li a i {
+        padding-right: 8px;
+    }
+
+/***** Resume styling *****/
+section.resume {
+
+}
+
+section.intro h1 {
+    font-size: 50px;
+    margin-bottom:35px;
+}
+
+/***** Blog styling *****/
+
+section.blog_posts article {
+    border-bottom: 1px solid #333;
+    padding-botom: -5px;
+}
+
+
+footer {
+    border-top: 1px solid #333;
+}
