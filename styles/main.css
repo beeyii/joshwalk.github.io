@@ -1,3 +1,5 @@
+@import "html5reset-1.6.1.css";
+
 * {
     margin: 0;
     padding: 0;
@@ -18,9 +20,6 @@ body {
     background: white;
     padding: 0 25px;
     color: #4a4a4a;
-    background-image: url("../images/background-gradient.png");
-    background-repeat: repeat-x;
-    background-size: 100% 100%;
     max-height: 100%;
 }
 
@@ -45,6 +44,17 @@ body {
         font-size: 50px;
         display: block;
     }
+
+@media screen and (max-width: 812px) {
+    .logo-container{
+        width:100%;
+        margin-left: 0;
+    }
+
+        .logo-container .logo {
+            text-align: center;
+        }
+}
 
 /***** Navigation styling *****/
 
@@ -80,6 +90,27 @@ nav {
         nav ul li a i {
             border-bottom: none;
         }
+
+@media screen and (max-width: 812px) {
+    nav {
+        margin: 0;
+        justify-content: flex-start;
+        text-align: center;
+        width: 100%;
+    }
+
+        nav ul {
+            margin-top: 20px;
+        }
+
+            nav ul li {
+                display: block;
+                padding: 0.5em 0;
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+
+}
 
 /***** Intro page styling *****/
 
