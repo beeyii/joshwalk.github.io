@@ -15,6 +15,14 @@ body {
     color: #4a4a4a;
 }
 
+/* adjusting font-size body text site-wide for older and very small
+   devices such as the iPhone 5 and older */
+@media only screen and (max-width: 568px) {
+    body {
+        font-size: 15px;
+    }
+}
+
 /***** Header styling *****/
 
 .header-container {
@@ -38,6 +46,8 @@ body {
         display: block;
     }
 
+/* the media queries with max-width 812px are targeting devices smaller
+   than iPhone 5 up to size of iPhone X */
 @media screen and (max-width: 812px) {
     .logo-container{
         width:100%;
@@ -190,6 +200,8 @@ section.intro {
             border-bottom: 3px solid #4484ce;
         }
 }
+
+
 
 
 ul.profiles {
