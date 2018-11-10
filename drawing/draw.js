@@ -37,7 +37,6 @@ function draw(e) {
 
   ctx.beginPath();
 
-  // hex color of line
   ctx.strokeStyle = color;
   ctx.lineWidth = size;
   ctx.lineCap = "round";
