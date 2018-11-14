@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<meta charset="UTF-8">
+	<title>Challenge 4</title>
+    <style>
+
+    .errormsg {
+    	color:red;
+    	/*font: Use a Google font*/
+    	display:none; }
+    </style>
+
+    <script type="text/javascript">
+    // function checkForm(){
+    // 	var a = document.getElementById("fullname")
+    // 	var b = document.getElementById("streetaddr")
+    // 	if (a.value.length == 0)
+    // 		{
+    //             document.getElementById("nameerrormsg").style.display = "block"; a = 0;}
+    // 	   else {
+    //             document.getElementById("nameerrormsg").style.display = "none";}
+    //
+    // 	if (b.value.length == 0)
+    // 		{document.getElementById("addrerrormsg").style.display = "block"; b = 0}
+    // 	else {document.getElementById("addrerrormsg").style.display = "none"; }
+    //
+    //     if (b == 0 || a == 0){
+    //         alert("NO!!")
+    //         return false;
+    //     }
+    // }
+    //
+    $(document).ready(function(){
+      $("#personaldetails").click(function() {
+          if ($("#fullname").val() == "") {
+            $("#nameerrormsg").toggle();
+            return false;
+          }
+          if ($("#streetaddr").val() == "") {
+            $("#addrerrormsg").toggle();
+            return false;
+          }
+          else {
+            return true;
+          }
+      });
+    });
+
+    </script>
+</head>
+<body>
+    <h1>Challenge 4 jQuery</h1>
+	<form action="challenge5_jq.html">
+        <fieldset>
+        <legend>Personal details</legend>
+          <label for="fullname">Full name: </label>
+            <input type="text" name="fullname" id="fullname"><br/>
+
+            <p class="errormsg" id="nameerrormsg">Please enter your name above!</p>
+
+          <label for ="streetaddr"></label>
+            Street Address:
+            <input type="text" name="streetaddr" id="streetaddr">
+
+            <p class="errormsg" id="addrerrormsg">Please enter your street address!</p>
+        </fieldset>
+        <input type="submit" id="personaldetails" value="Submit it!">
+    </form>
+</body>
+</html>
