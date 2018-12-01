@@ -1,5 +1,11 @@
 @import "html5reset-1.6.1.css";
 
+h1 {
+  margin: 30px;
+  font-family: sans-serif;
+  font-size: 25px;
+}
+
 .grid {
   position: relative;
 }
