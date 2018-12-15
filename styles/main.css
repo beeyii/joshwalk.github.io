@@ -17,10 +17,30 @@ body {
 
 /* adjusting font-size body text site-wide for older and very small
    devices such as the iPhone 5 and older */
-@media only screen and (max-width: 568px) {
+@media only screen and (max-width: 374px) {
     body {
         font-size: 15px;
     }
+}
+
+.skip {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  height: 1px;
+  width: 1px;
+  text-align: left;
+  overflow: hidden;
+}
+
+a.skip:active,
+a.skip:focus,
+a.skip:hover {
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  overflow: visible;
 }
 
 /***** Header styling *****/
@@ -46,9 +66,9 @@ body {
         display: block;
     }
 
-/* the media queries with max-width 812px are targeting devices smaller
+/* the media queries with max-width 767px are targeting devices smaller
    than iPhone 5 up to size of iPhone X */
-@media screen and (max-width: 812px) {
+@media screen and (max-width: 767px) {
     .logo-container{
         width:100%;
         margin-left: 0;
@@ -58,6 +78,15 @@ body {
             text-align: center;
         }
 }
+
+/* smaller */
+@media only screen and (max-width: 374px) {
+    .header-container {
+        padding: 10px 0;
+        width: 100%;
+    }
+}
+
 
 /***** Navigation styling *****/
 
@@ -94,7 +123,34 @@ nav {
             border-bottom: none;
         }
 
-@media screen and (max-width: 812px) {
+@media screen and (max-width: 767px) {
+    nav {
+        margin: 0;
+        justify-content: flex-start;
+        text-align: center;
+        width: 100%;
+    }
+
+        nav ul {
+            margin-top: 20px;
+        }
+
+            nav ul li {
+                font-size: 15px;
+                display: inline;
+                padding: 0.5em;
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+
+            nav ul li a {
+                display: inline;
+                width: 100%;
+            }
+
+}
+
+@media only screen and (max-width: 374px) {
     nav {
         margin: 0;
         justify-content: flex-start;
@@ -108,18 +164,28 @@ nav {
 
             nav ul li {
                 display: block;
-                padding: 0.5em 0;
                 text-transform: uppercase;
                 font-weight: 600;
+                padding: 0;
             }
 
-            nav ul li {
+            nav ul li a {
+                font-size: 13px;
                 display: block;
-                padding: 0.5em 0;
-                text-transform: uppercase;
-                font-weight: 600;
+                width: 100%;
+                padding: 5px 0;
+                border-bottom: 1px solid #4484ce;
             }
 
+                nav ul li a:first {
+                    border-top: 1px solid #4484ce;
+                }
+
+                nav ul li a.current {
+                    border-bottom: 1px solid #4484ce;
+                    background-color: #4484ce;
+                    color: #fff;
+                }
 }
 
 /***** Unified headings styling *****/
@@ -142,12 +208,31 @@ h3 {
     padding-bottom: 9px;
 }
 
-@media screen and (max-width: 812px) {
+@media screen and (max-width: 767px) {
     h1 {
         font-size: 30px;
         text-align: center;
     }
 }
+
+@media only screen and (max-width: 374px) {
+    h1 {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+}
+
+
 
 /***** Paragraph styling *****/
 
@@ -192,7 +277,7 @@ section.intro {
             color: #f9cf00;
         }
 
-@media screen and (max-width: 812px) {
+@media screen and (max-width: 767px) {
     section.intro {
         font-size: 30px;
     }
@@ -255,7 +340,11 @@ article .content-wrapper {
         width: 75%;
     }
 
-@media screen and (max-width: 812px) {
+    article .content-wrapper img {
+        max-width: 100%;
+    }
+
+@media screen and (max-width: 767px) {
     article .title-wrapper {
             width: 100%;
             text-align: center;
@@ -280,3 +369,11 @@ article .content-wrapper {
 
 
 }
+
+body.-nightmode {
+    background: #000 !important;
+  }
+
+  body.-nightmode * {
+      color: white !important;
+    }

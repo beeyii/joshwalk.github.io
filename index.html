@@ -7,10 +7,20 @@
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Karla|Montserrat|Satisfy|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="mainscript.js"></script>
+
     <title>Joshua Walker | Online Portfolio</title>
 </head>
 <body>
 <main>
+
+<!-- https://www.bignerdranch.com/blog/web-accessibility-skip-navigation-links/ -->
+<a href="#content" class="skip">Skip to content</a>
+
+<!-- https://codepen.io/ricotheque/pen/qrbwZP -->
+<button class="night-mode-button">Night Mode</button>
 
 <header class ="header-container">
     <div class ="logo-container">
@@ -28,7 +38,7 @@
 
 
 
-<section class="intro">
+<section class="intro" id="content" role="main">
     <h1>Hey, I&rsquo;m Joshua Walker.</h1>
     <p>
         I&rsquo;m a data analyst at <a class="newt" href="http://blue-newt.com" rel="">Blue Newt Software</a> and a senior studying Information Analysis at the <a class="umsi" href="http://si.umich.edu" rel="">University of Michigan School of Information</a>.
