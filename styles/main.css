@@ -428,6 +428,16 @@ body.-nightmode {
       color: white !important;
     }
 
+  body.-nightmode a {
+      border-bottom-color: white !important;
+  }
+
+  body.-nightmode .slick-prev:before,
+  body.-nightmode .slick-next:before {
+      color: white !important;
+      opacity: 1;
+  }
+
 /**** Slick (carousel) styling ****/
 
 .container {
@@ -435,7 +445,6 @@ body.-nightmode {
   padding: 40px;
   width: 80%;
   color: #333;
-  background: #419be0;
 }
 
 .slick-slide {
@@ -445,6 +454,6 @@ body.-nightmode {
 }
 
 .slick-prev:before, .slick-next:before {
-    color: #4484ce;
+    color: #4a4a4a;
     opacity: 1;
 }
