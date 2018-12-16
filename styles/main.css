@@ -57,14 +57,10 @@ a.skip:hover {
 .logo-container {
     margin-left: 15px;
 }
-
-    .logo-container .logo {
-        font-family: 'Satisfy', cursive;
-        font-weight: 600;
-        color: #4484ce;
-        font-size: 50px;
-        display: block;
+    .logo-container img {
+        width: 100px;
     }
+
 
 /* the media queries with max-width 767px are targeting devices smaller
    than iPhone 5 up to size of iPhone X */
@@ -74,8 +70,9 @@ a.skip:hover {
         margin-left: 0;
     }
 
-        .logo-container .logo {
-            text-align: center;
+        .logo-container img {
+            display: block;
+            margin: 0 auto;
         }
 }
 
@@ -84,6 +81,10 @@ a.skip:hover {
     .header-container {
         padding: 10px 0;
         width: 100%;
+    }
+
+    .logo-container img {
+        width: 50px
     }
 }
 
@@ -132,15 +133,19 @@ nav {
     }
 
         nav ul {
-            margin-top: 20px;
+            margin: 20px -25px 0 -25px;
         }
 
             nav ul li {
                 font-size: 15px;
                 display: inline;
-                padding: 0.5em;
+                padding: 0.25em;
                 text-transform: uppercase;
                 font-weight: 600;
+            }
+
+            nav ul li button {
+                display: none;
             }
 
             nav ul li a {
@@ -188,6 +193,17 @@ nav {
                 }
 }
 
+/***** Button styling ****/
+button {
+    font-weight:bold;
+    font-size: 14px;
+    background-color: #4a4a4a;
+    border: 1px solid #4a4a4a;
+    border-radius: 5px;
+    color: #fff;
+}
+
+
 /***** Unified headings styling *****/
 
 h1 {
@@ -206,6 +222,10 @@ h3 {
     font-style:italic;
     font-size: 16px;
     padding-bottom: 9px;
+}
+
+.blog_posts h3 {
+    padding-bottom: 20px;
 }
 
 @media screen and (max-width: 767px) {
@@ -260,7 +280,7 @@ section.intro {
     font-size: 50px;
     color: #4a4a4a;
     text-align: left;
-    line-height: 1.25;
+    line-height: 1.33;
 }
 
 
@@ -279,15 +299,26 @@ section.intro {
 
 @media screen and (max-width: 767px) {
     section.intro {
-        font-size: 30px;
+        font-size: 25px;
+        line-height: 1.5;
+        text-align: center;
     }
         section.intro a {
             border-bottom: 3px solid #4484ce;
         }
 }
 
+@media only screen and (max-width: 374px) {
+    section.intro {
+        font-size: 18px;
+    }
+        section.intro a {
+            border-bottom-width: 1px;
+        }
+}
 
 
+/* "Profiles" section on intro page */
 
 ul.profiles {
     margin: 75px 0;
@@ -304,6 +335,7 @@ ul.profiles {
     ul.profiles li a {
         text-decoration: none;
         color: #4a4a4a;
+        border-bottom: none;
     }
 
     ul.profiles li a:hover {
@@ -315,6 +347,13 @@ ul.profiles {
         padding-right: 8px;
     }
 
+    @media screen and (max-width: 767px) {
+        ul.profiles {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
 
 /***** Structure *****/
 
@@ -322,8 +361,9 @@ article {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-    padding-top: 25px;
-    border-top: 2px solid #4a4a4a;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-top: 2px solid #ccc;
 }
 
 article .title-wrapper {

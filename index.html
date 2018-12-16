@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Karla|Montserrat|Satisfy|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -14,17 +13,15 @@
     <title>Joshua Walker | Online Portfolio</title>
 </head>
 <body>
-<main>
 
+
+
+<header class ="header-container">
 <!-- https://www.bignerdranch.com/blog/web-accessibility-skip-navigation-links/ -->
 <a href="#content" class="skip">Skip to content</a>
 
-<!-- https://codepen.io/ricotheque/pen/qrbwZP -->
-<button class="night-mode-button">Night Mode</button>
-
-<header class ="header-container">
     <div class ="logo-container">
-        <span class = "logo">jw</span>
+        <a href="index.html"><img src="images/logo2.png" alt="Joshua Walker logo, link desitination: home page"></a>
     </div>
     <nav>
         <ul>
@@ -32,6 +29,9 @@
             <li><a href="resume.html" rel="">Resume</a></li>
             <li><a href="projects.html" rel="">Projects</a></li>
             <li><a href="blog.html" rel="">Blog</a></li>
+            <li><a href="travel.html" rel="">Travel</a></li>
+            <!-- https://codepen.io/ricotheque/pen/qrbwZP -->
+            <li><button class="night-mode-button">Dark Mode</button></li>
         </ul>
     </nav>
 </header>
@@ -43,15 +43,18 @@
     <p>
         I&rsquo;m a data analyst at <a class="newt" href="http://blue-newt.com" rel="">Blue Newt Software</a> and a senior studying Information Analysis at the <a class="umsi" href="http://si.umich.edu" rel="">University of Michigan School of Information</a>.
     </p>
+
+    <div class="profiles-container">
+    <ul class="profiles">
+        <li><a href="http://github.com/joshwalk"><i class="fab fa-github"></i>GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/joshua-walker-670a06159/"><i class="fab fa-linkedin"></i>LinkedIn</a></li>
+        <li><a href="mailto:joshwalk@umich.edu"><i class="far fa-envelope"></i>Email</a></li>
+    </ul>
+    </div>
 </section>
 
-<ul class="profiles">
-    <li><a href="http://github.com/joshwalk"><i class="fab fa-github"></i>GitHub</a></li>
-    <li><a href="https://www.linkedin.com/in/joshua-walker-670a06159/"><i class="fab fa-linkedin"></i>LinkedIn</a></li>
-    <li><a href="mailto:joshwalk@umich.edu"><i class="far fa-envelope"></i>Email</a></li>
-</ul>
 
 
-</main>
+
 </body>
 </html>

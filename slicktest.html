@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+  <title>My Now Amazing Webpage</title>
+  <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
+  </head>
+
+  <style>
+  .container {
+    margin: 0 auto;
+    padding: 40px;
+    width: 80%;
+    color: #333;
+    background: #419be0;
+  }
+
+  .slick-slide {
+    text-align: center;
+    color: #419be0;
+    background: white;
+  }
+  </style>
+  <body>
+
+
+    <div class='container'>
+      <div class='single-item'>
+        <div><img src="images/blue_newt.jpg" alt="blue_newt">
+</div>
+        <div><h3>2</h3></div>
+        <div><h3>3</h3></div>
+        <div><h3>4</h3></div>
+        <div><h3>5</h3></div>
+        <div><h3>6</h3></div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="slick/slick/slick.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(".single-item").slick({
+      	dots: true
+      });
+
+    });
+  </script>
+
+  </body>
+</html>

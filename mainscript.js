@@ -18,13 +18,6 @@ $( document ).ready(function() {
     }).focus(); // focus on the content container
   });
 
-  var button = $('.night-mode-button');
-  var container = $('body');
-
-  button.click(function() {
-    container.toggleClass('-nightmode');
-});
-
   // https://stackoverflow.com/questions/2155453/jquery-toggle-text
   $.fn.extend({
     toggleText: function(a, b){
@@ -32,10 +25,23 @@ $( document ).ready(function() {
     }
   });
 
+  // https://codepen.io/ricotheque/pen/qrbwZP
+  var button = $('.night-mode-button');
+  var container = $('body');
+
+  button.click(function() {
+    container.toggleClass('-nightmode');
+    $(this).toggleText('Dark Mode', 'Light Mode')
+});
+
+
   $(".collapse").click(function(event) {
     $(this).parent().next('.content-wrapper').toggle();
     $(this).toggleText('Collapse Content', 'Show Content')
   });
+
+
+
 
 
 
